@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 void* meu_malloc(size_t tamanho) {
     void* ptr;
@@ -14,7 +15,7 @@ void* meu_malloc(size_t tamanho) {
 int main() {
     int *ponteiro = (int*)meu_malloc(sizeof(int));
     if (ponteiro == NULL) {
-        printf("Erro: nao foi possivel alocar a memoria\n");
+        printf("Erro: não foi possível alocar a memória\n");
     } else {
         *ponteiro = 42;
         printf("O valor de ponteiro é %d\n", *ponteiro);
@@ -22,3 +23,4 @@ int main() {
     }
     return 0;
 }
+
